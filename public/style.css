@@ -1,0 +1,118 @@
+@font-face {
+  font-family: 'Trench';
+  font-weight: 400;
+  src: url('./assets/trench100free.otf');
+}
+
+:root {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+body {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #040e29, #000000);
+}
+
+header {
+  background-color: #00000055;
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  & > span.logo {
+    max-height: 3rem;
+    margin-right: 0.2rem;
+    font-size: 1.4rem;
+    font-family: 'Trench';
+    color: #fff;
+    justify-content: left;
+    padding: 0.3rem 0;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-width: 70%;
+  flex-grow: 1;
+}
+
+#mensagens {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex;
+  align-items: center;
+  min-height: 75%;
+  background-color: #ffffff09;
+  flex-grow: 1;
+  width: 100%;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.mensagem {
+  background-color: #040e29;
+  color: #fff;
+  font-size: 0.9rem;
+  font-family: 'Tahoma';
+  width: 75%;
+  margin: 1rem 0.5rem;
+  padding: 0.5rem;
+  justify-content: right;
+  border-radius: 10px;
+}
+
+#mensagens > .mensagem:last-of-type {
+  background-color: #0b266f;
+}
+
+#envio-mensagens {
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  min-width: 40%;
+  max-height: 3rem;
+  & > input {
+    background-color: #0b266f28;
+    border-color: #fff;
+    color: #fff;
+    border-radius: 0.50rem;
+    font-size: 0.9rem;
+    font-family: 'Tahoma';
+    flex-grow: 1;
+    padding: 0.5rem 0.3rem;
+  }
+  & > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #ffffff00;
+    color: #fff;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 12px;
+    margin-left: 0.5rem;
+    &:hover {
+      background-color: #ffffff26;
+      transition: 0.2s;
+      transform: scale(110%);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    width: 90%;
+  }
+}
